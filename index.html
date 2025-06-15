@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Guest List Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Event Guest List Manager</h1>
+            <p>Manage your event guests with style and ease</p>
+        </div>
+
+        <div class="form-section">
+            <form id="guestForm">
+                <div class="form-container">
+                    <div class="input-group">
+                        <label for="guestName">Guest Name</label>
+                        <input type="text" id="guestName" name="guestName" placeholder="Enter guest name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="guestCategory">Category</label>
+                        <select id="guestCategory" name="guestCategory">
+                            <option value="friend">Friend</option>
+                            <option value="family">Family</option>
+                            <option value="colleague">Colleague</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" class="btn">Add Guest</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="guest-list-section">
+            <div class="guest-counter">
+                <div class="counter-text">
+                    <span id="guestCount">0</span> / 10 Guests
+                </div>
+                <div class="limit-warning" id="limitWarning" style="display: none;">
+                    ⚠️ You've reached the maximum limit of 10 guests
+                </div>
+            </div>
+
+            <div id="guestList" class="guest-list">
+                <div class="empty-state">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">👥</div>
+                    <h3>No guests yet</h3>
+                    <p>Add your first guest to get started!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/index.js"></script>
+</body>
+</html>
